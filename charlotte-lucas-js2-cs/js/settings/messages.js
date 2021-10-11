@@ -1,0 +1,1 @@
+export const EMPTY_RESULTS = "No news articles found";
