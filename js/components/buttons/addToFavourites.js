@@ -1,4 +1,4 @@
-import { getExistingFavourites } from "../utils/storage.js";
+import { getExistingFavourites } from "../../utils/storage.js";
 
 export function addToFavourites() {
     const favButtons = document.querySelectorAll(".article i");

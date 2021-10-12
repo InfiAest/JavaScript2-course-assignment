@@ -1,5 +1,5 @@
-import renderArticles from "./renderArticles.js";
-import { articleContainer } from "../settings/articleContainer.js";
+import renderArticles from "../renderArticles.js";
+import { articleContainer } from "../../settings/articleContainer.js";
 
 export default function clearArticlesButton() {
     const clearBtn = document.querySelector("#clear");
@@ -8,7 +8,7 @@ export default function clearArticlesButton() {
 
     function clearArticles() {
         confirm("Are you sure you want to clear your favourite articles?");
-        localStorage.clear();
+        localStorage.removeItem("favourites");
         renderArticles([], articleContainer);
     }
 }

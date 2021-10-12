@@ -1,7 +1,7 @@
 import { getExistingFavourites } from "../utils/storage.js";
-import displayMessage from "./displayMessage.js";
+import displayMessage from "./common/displayMessage.js";
 import { EMPTY_RESULTS } from "../settings/messages.js";
-import { addToFavourites } from "./addToFavourites.js";
+import { addToFavourites } from "./buttons/addToFavourites.js";
 
 
 export default function renderArticles(articlesToRender, targetElement) {
@@ -27,14 +27,14 @@ export default function renderArticles(articlesToRender, targetElement) {
             }
 
             element.innerHTML += `<div class="article">
-                                                <div class="title-container">
-                                                    <h2>${article.title}</h2>
-                                                    <i class="${cssClass} fa-star" data-id="${article.id}" data-title="${article.title}" data-summary="${article.summary}" data-author="${article.author}"></i>
-                                                </div>
-                                                <div class="underline"></div>
-                                                <p>${article.summary}</p>
-                                                <h3>${article.author}</h3>
-                                            </div>`;
+                                        <a href="edit.html?id=${article.id}" class="article-link">
+                                            <h2>${article.title}</h2>
+                                            <div class="underline"></div>
+                                            <p>${article.summary}</p>
+                                            <h3>${article.author}</h3>
+                                        </a>
+                                        <i class="${cssClass} fa-star" data-id="${article.id}" data-title="${article.title}" data-summary="${article.summary}" data-author="${article.author}"></i>
+                                    </div>`;
     });
 
     addToFavourites();
