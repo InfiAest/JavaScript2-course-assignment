@@ -1,6 +1,8 @@
-import { getExistingFavourites } from "./utils/storage.js";
+import { getExistingFavourites } from "../common/utils/storage.js";
 import clearArticlesButton from "./components/buttons/clearButton.js";
-import createMenu from "./components/common/createMenu.js";
+import createMenu from "../common/components/createMenu.js";
+import displayMessage from "../common/components/displayMessage.js";
+import { EMPTY_RESULTS } from "../common/settings/messages.js";
 
 createMenu();
 
@@ -11,7 +13,7 @@ const articleContainer = document.querySelector(".article-container");
 clearArticlesButton();
 
 if(favourites.length === 0) {
-    articleContainer.innerHTML = "No favourites yet";
+    displayMessage("", EMPTY_RESULTS, ".article-container");
 }
 
 favourites.forEach(favourite => {

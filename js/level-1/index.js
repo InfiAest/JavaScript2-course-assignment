@@ -1,9 +1,9 @@
-import { baseUrl } from "./settings/api.js";
-import renderArticles from "./components/renderArticles.js";
-import displayMessage from "./components/common/displayMessage.js";
-import searchArticles from "./components/searchArticles.js";
-import { articleContainer } from "./settings/articleContainer.js";
-import createMenu from "./components/common/createMenu.js";
+import { baseUrl } from "../common/settings/api.js";
+import renderArticles from "../common/components/renderArticles.js";
+import displayMessage from "../common/components/displayMessage.js";
+import searchArticles from "./components/search/searchArticles.js";
+import { articleContainer } from "../common/settings/articleContainer.js";
+import createMenu from "../common/components/createMenu.js";
 
 createMenu();
 

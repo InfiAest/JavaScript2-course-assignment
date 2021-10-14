@@ -1,7 +1,7 @@
-import { baseUrl } from "./settings/api.js";
-import { getToken } from "./utils/storage.js";
-import displayMessage from "./components/common/displayMessage.js";
-import createMenu from "./components/common/createMenu.js";
+import { baseUrl } from "../common/settings/api.js";
+import { getToken } from "../common/utils/storage.js";
+import displayMessage from "../common/components/displayMessage.js";
+import createMenu from "../common/components/createMenu.js";
 import deleteArticleButton from "./components/buttons/deleteArticleButton.js";
 
 const token = getToken();

@@ -1,6 +1,6 @@
-import displayMessage from "./components/common/displayMessage.js";
+import displayMessage from "../common/components/displayMessage.js";
 import completeLogin from "./components/login/completeLogin.js";
-import createMenu from "./components/common/createMenu.js";
+import createMenu from "../common/components/createMenu.js";
 
 const form = document.querySelector("form");
 const username = document.querySelector("#username");

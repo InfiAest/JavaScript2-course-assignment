@@ -51,3 +51,7 @@ function getFromStorage(key) {
 
     return JSON.parse(value);
 }
+
+export function saveFavourites(favourites) {
+    localStorage.setItem("favourites", JSON.stringify(favourites));
+};

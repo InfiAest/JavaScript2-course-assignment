@@ -1,4 +1,4 @@
-import { getUsername } from "../../utils/storage.js";
+import { getUsername } from "../../common/utils/storage.js";
 import logout from "./logout.js";
 
 export default function createMenu() {

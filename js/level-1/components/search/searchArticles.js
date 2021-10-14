@@ -1,4 +1,4 @@
-import renderArticles from "./renderArticles.js";
+import renderArticles from "../../../common/components/renderArticles.js";
 
 export default function searchArticles(articles, targetElement) {
 

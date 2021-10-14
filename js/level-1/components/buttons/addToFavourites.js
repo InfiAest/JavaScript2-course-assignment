@@ -1,14 +1,13 @@
-import { getExistingFavourites } from "../../utils/storage.js";
+import { getExistingFavourites, saveFavourites } from "../../../common/utils/storage.js";
 
 export function addToFavourites() {
     const favButtons = document.querySelectorAll(".article i");
 
         favButtons.forEach((button) => {
-            button.addEventListener("click", handleClick);
+            button.addEventListener("click", toggleFavourite);
         });
 
-
-        function handleClick() {
+        function toggleFavourite() {
             this.classList.toggle("fa");
             this.classList.toggle("far");
         
@@ -25,18 +24,12 @@ export function addToFavourites() {
         
             if(!articleExists) {
                 const article = { id: id, title: title, summary: summary, author: author };
-        
                 currentFavourites.push(article);
-            
                 saveFavourites(currentFavourites);
             }
             else {
                 const newFavourites = currentFavourites.filter(article => article.id !== id);
                 saveFavourites(newFavourites);
             }
-        };
-
-        function saveFavourites(favourites) {
-            localStorage.setItem("favourites", JSON.stringify(favourites));
         };
 };

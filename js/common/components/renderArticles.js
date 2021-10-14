@@ -1,7 +1,7 @@
-import { getExistingFavourites } from "../utils/storage.js";
-import displayMessage from "./common/displayMessage.js";
-import { EMPTY_RESULTS } from "../settings/messages.js";
-import { addToFavourites } from "./buttons/addToFavourites.js";
+import { getExistingFavourites } from "../../common/utils/storage.js";
+import displayMessage from "./displayMessage.js";
+import { EMPTY_RESULTS } from "../../common/settings/messages.js";
+import { addToFavourites } from "../../level-1/components/buttons/addToFavourites.js";
 
 
 export default function renderArticles(articlesToRender, targetElement) {
