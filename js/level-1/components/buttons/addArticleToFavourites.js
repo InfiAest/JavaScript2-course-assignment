@@ -1,6 +1,6 @@
-import { getExistingFavourites, saveFavourites } from "../../../common/utils/storage.js";
+import { getExistingFavouriteArticles, saveToFavouriteArticles } from "../../../common/utils/storage.js";
 
-export function addToFavourites() {
+export function addArticleToFavourites() {
     const favButtons = document.querySelectorAll(".article i");
 
         favButtons.forEach((button) => {
@@ -16,7 +16,7 @@ export function addToFavourites() {
             const summary = this.dataset.summary;
             const author = this.dataset.author;
         
-            const currentFavourites = getExistingFavourites();
+            const currentFavourites = getExistingFavouriteArticles();
             
             const articleExists = currentFavourites.find(function(article) {
                 return article.id === id;
@@ -25,11 +25,11 @@ export function addToFavourites() {
             if(!articleExists) {
                 const article = { id: id, title: title, summary: summary, author: author };
                 currentFavourites.push(article);
-                saveFavourites(currentFavourites);
+                saveToFavouriteArticles(currentFavourites);
             }
             else {
                 const newFavourites = currentFavourites.filter(article => article.id !== id);
-                saveFavourites(newFavourites);
+                saveToFavouriteArticles(newFavourites);
             }
         };
 };

@@ -1,5 +1,5 @@
 import { baseUrl } from "../../../common/settings/api.js";
-import { getExistingFavourites, getToken, saveFavourites } from "../../../common/utils/storage.js";
+import { getExistingFavouriteArticles, getToken, saveToFavouriteArticles } from "../../../common/utils/storage.js";
 
 export default function deleteArticleButton(id) {
 
@@ -13,9 +13,9 @@ export default function deleteArticleButton(id) {
         
         console.log(id);
 
-        const doDelete = confirm("Are you sure you want to delete this article?");
+        const doDeleteArticle = confirm("Are you sure you want to delete this article?");
 
-        if(doDelete) {
+        if(doDeleteArticle) {
             const url = baseUrl + "articles/" + id;
 
             const token = getToken();
@@ -39,7 +39,7 @@ export default function deleteArticleButton(id) {
                 const params = new URLSearchParams(queryString);
                 const id = params.get("id");
                 //get the favourites array
-                const currentFavourites = getExistingFavourites();
+                const currentFavourites = getExistingFavouriteArticles();
                 //find the current article id inside the array
                 const articleExists = currentFavourites.find(function(article) {
                     return article.id === id;
@@ -47,7 +47,7 @@ export default function deleteArticleButton(id) {
                 //if the article is in the array remove it and save the new favourites array
                 if (articleExists) {
                     const newFavourites = currentFavourites.filter(article => article.id !== id);
-                    saveFavourites(newFavourites);
+                    saveToFavouriteArticles(newFavourites);
                 }
                 
             }

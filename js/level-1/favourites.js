@@ -1,12 +1,12 @@
-import { getExistingFavourites } from "../common/utils/storage.js";
-import clearArticlesButton from "./components/buttons/clearButton.js";
-import createMenu from "../common/components/createMenu.js";
+import { getExistingFavouriteArticles } from "../common/utils/storage.js";
+import clearArticlesButton from "./components/buttons/clearArticlesButton.js";
+import createNavBar from "../common/components/createNavBar.js";
 import displayMessage from "../common/components/displayMessage.js";
 import { EMPTY_RESULTS } from "../common/settings/messages.js";
 
-createMenu();
+createNavBar();
 
-const favourites = getExistingFavourites();
+const favourites = getExistingFavouriteArticles();
 
 const articleContainer = document.querySelector(".article-container");
 

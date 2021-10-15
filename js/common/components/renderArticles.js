@@ -1,7 +1,7 @@
-import { getExistingFavourites } from "../../common/utils/storage.js";
+import { getExistingFavouriteArticles } from "../../common/utils/storage.js";
 import displayMessage from "./displayMessage.js";
 import { EMPTY_RESULTS } from "../../common/settings/messages.js";
-import { addToFavourites } from "../../level-1/components/buttons/addToFavourites.js";
+import { addArticleToFavourites } from "../../level-1/components/buttons/addArticleToFavourites.js";
 
 
 export default function renderArticles(articlesToRender, targetElement) {
@@ -13,7 +13,7 @@ export default function renderArticles(articlesToRender, targetElement) {
         displayMessage("", EMPTY_RESULTS, targetElement);
     };
 
-    const favourites = getExistingFavourites();
+    const favourites = getExistingFavouriteArticles();
 
     articlesToRender.forEach(function(article) {
         let cssClass = "far";
@@ -37,6 +37,6 @@ export default function renderArticles(articlesToRender, targetElement) {
                                     </div>`;
     });
 
-    addToFavourites();
+    addArticleToFavourites();
 
 };

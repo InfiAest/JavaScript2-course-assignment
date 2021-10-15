@@ -1,7 +1,7 @@
 import { baseUrl } from "../common/settings/api.js";
 import { getToken } from "../common/utils/storage.js";
 import displayMessage from "../common/components/displayMessage.js";
-import createMenu from "../common/components/createMenu.js";
+import createNavBar from "../common/components/createNavBar.js";
 import deleteArticleButton from "./components/buttons/deleteArticleButton.js";
 
 const token = getToken();
@@ -10,7 +10,7 @@ if(!token) {
     location.href = "/";
 }
 
-createMenu();
+createNavBar();
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -53,6 +53,7 @@ const loadingContainer = document.querySelector(".loading");
 
 })();
 
+
 form.addEventListener("submit", editArticle);
 
 function editArticle(event) {
@@ -64,7 +65,7 @@ function editArticle(event) {
     const summaryValue = summary.value.trim();
     const authorValue = author.value.trim();
     const idValue = idInput.value;
-
+    
     if (titleValue.length === 0 || summaryValue.length === 0 || authorValue.length === 0) {
         return displayMessage("warning", "Supply proper values", ".message-container");
     }

@@ -3,9 +3,9 @@ import renderArticles from "../common/components/renderArticles.js";
 import displayMessage from "../common/components/displayMessage.js";
 import searchArticles from "./components/search/searchArticles.js";
 import { articleContainer } from "../common/settings/articleContainer.js";
-import createMenu from "../common/components/createMenu.js";
+import createNavBar from "../common/components/createNavBar.js";
 
-createMenu();
+createNavBar();
 
 const url = baseUrl + "articles";
 

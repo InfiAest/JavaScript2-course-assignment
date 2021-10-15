@@ -1,14 +1,14 @@
-import { clearStorage } from "../../common/utils/storage.js";
+import { logoutUser } from "../../common/utils/storage.js";
 
 export default function logout() {
     const logoutButton = document.querySelector("#logout");
 
     if(logoutButton) {
         logoutButton.onclick = function() {
-            const doLogout = confirm("Are you sure you want to logout?");
+            const completeLogout = confirm("Are you sure you want to logout?");
 
-            if (doLogout) {
-                clearStorage();
+            if (completeLogout) {
+                logoutUser();
                 location.href = "/";
             }
         }

@@ -1,13 +1,13 @@
 import displayMessage from "../common/components/displayMessage.js";
 import completeLogin from "./components/login/completeLogin.js";
-import createMenu from "../common/components/createMenu.js";
+import createNavBar from "../common/components/createNavBar.js";
 
 const form = document.querySelector("form");
 const username = document.querySelector("#username");
 const password = document.querySelector("#password");
 const message = document.querySelector(".message-container");
 
-createMenu();
+createNavBar();
 
 form.addEventListener("submit", validateForm);
 

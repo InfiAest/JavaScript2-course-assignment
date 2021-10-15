@@ -1,5 +1,5 @@
 import displayMessage from "../common/components/displayMessage.js";
-import createMenu from "../common/components/createMenu.js";
+import createNavBar from "../common/components/createNavBar.js";
 import { getToken } from "../common/utils/storage.js";
 import { baseUrl } from "../common/settings/api.js";
 
@@ -9,7 +9,7 @@ if(!token) {
     location.href = "/";
 }
 
-createMenu();
+createNavBar();
 
 const form = document.querySelector("form");
 const title = document.querySelector("#title");

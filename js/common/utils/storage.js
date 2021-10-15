@@ -1,8 +1,9 @@
 const tokenKey = "token";
 const userKey = "user";
+export const favouritesKey = "favourites";
 
-export function getExistingFavourites() {
-    const favourites = localStorage.getItem("favourites");
+export function getExistingFavouriteArticles() {
+    const favourites = localStorage.getItem(favouritesKey);
 
     if(!favourites) {
         return [];
@@ -34,8 +35,9 @@ export function getUsername() {
     return null;
 }
 
-export function clearStorage() {
-    localStorage.clear();
+export function logoutUser() {
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
 }
 
 function saveToStorage(key, value) {
@@ -52,6 +54,6 @@ function getFromStorage(key) {
     return JSON.parse(value);
 }
 
-export function saveFavourites(favourites) {
-    localStorage.setItem("favourites", JSON.stringify(favourites));
+export function saveToFavouriteArticles(favourites) {
+    localStorage.setItem(favouritesKey, JSON.stringify(favourites));
 };
