@@ -1,5 +1,5 @@
 import { baseUrl } from "../common/settings/api.js";
-import { getToken } from "../common/utils/storage.js";
+import { getExistingFavouriteArticles, getToken, saveToFavouriteArticles } from "../common/utils/storage.js";
 import displayMessage from "../common/components/displayMessage.js";
 import createNavBar from "../common/components/createNavBar.js";
 import deleteArticleButton from "./components/buttons/deleteArticleButton.js";
@@ -93,6 +93,30 @@ async function updateArticle(title, summary, author, id) {
 
         if (json.updated_at) {
             displayMessage("success", "Article updated", ".message-container");
+
+           //find out if this article is in the favourites array in the storage
+            const currentFavouriteArticles = getExistingFavouriteArticles();
+            const articleExists = currentFavouriteArticles.find(function(article) {
+                return article.id === id;
+            });
+            console.log(articleExists);
+
+            //if it is in the favourites array then:
+            if(articleExists) {
+                //remove the article from the array if the id matches that of the current articles id
+                //and save that favourites array again
+                const updatedFavouriteArticles = currentFavouriteArticles.filter(article => article.id !== id);
+                saveToFavouriteArticles(updatedFavouriteArticles);
+
+                //then get that favourites array again
+                //create the updated article with the info from the current page
+                //and push it to the favourites array
+                const updatedArticle = { id: id, title: title, summary: summary, author: author };
+                const newFavouriteArticles = getExistingFavouriteArticles();
+                newFavouriteArticles.push(updatedArticle);
+                saveToFavouriteArticles(newFavouriteArticles);
+            }
+
         }
 
         if (json.error) {
