@@ -1,3 +1,16 @@
+# Course Assignment - JavaScript2 - Noroff school of Technology & Digital Media
+
+### Brief
+Use the Strapi API found here. The login details for admin section are in the README file in the repo.
+
+You can add and edit content in the Strapi project but do not edit the content type(s) (don’t add, edit or delete fields). The markers will use the same version of the API found in the repo.
+
+You can also build your own API using any technology but it MUST BE publicly hosted. Do not submit your API code if you create your own. If you do build and host your own API, the content type it serves must include at least 3 properties.
+
+Level 1 is required. Level 2 is optional.
+
+Choosing appropriate variable and function names will form part of your assessment, as will proper and consistent formatting of your code.
+
 ## Strapi application
 
 To start the Strapi project:
@@ -18,19 +31,6 @@ There is one content type in the project, accessible at `http://localhost:1337/a
 If you get an error about port 1337 being in use, you probably have Strapi running in another command line or terminal.
 
 Note: If you are getting an error when trying to post using the username and password above, please try the password 'Pass123' instead of 'Pass1234'.
-
-# Course Assignment
-
-### Brief
-Use the Strapi API found here. The login details for admin section are in the README file in the repo.
-
-You can add and edit content in the Strapi project but do not edit the content type(s) (don’t add, edit or delete fields). The markers will use the same version of the API found in the repo.
-
-You can also build your own API using any technology but it MUST BE publicly hosted. Do not submit your API code if you create your own. If you do build and host your own API, the content type it serves must include at least 3 properties.
-
-Level 1 is required. Level 2 is optional.
-
-Choosing appropriate variable and function names will form part of your assessment, as will proper and consistent formatting of your code.
 
 ## Level 1 Process
 Build a frontend for the API and add the following:
