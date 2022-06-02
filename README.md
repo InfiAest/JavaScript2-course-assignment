@@ -1,17 +1,56 @@
-# Course Assignment - JavaScript2 - Noroff school of Technology & Digital Media
+# JavaScript2 - Course Assignment
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/71286689/171594892-29a12dd8-3d92-40ff-8b28-5a273a495ef6.png" alt="JS2 course assignment homepage" />
+</p>
 
-### Brief
-Use the Strapi API found here. The login details for admin section are in the README file in the repo.
-
-You can add and edit content in the Strapi project but do not edit the content type(s) (don’t add, edit or delete fields). The markers will use the same version of the API found in the repo.
-
-You can also build your own API using any technology but it MUST BE publicly hosted. Do not submit your API code if you create your own. If you do build and host your own API, the content type it serves must include at least 3 properties.
-
-Level 1 is required. Level 2 is optional.
-
+## Description
+Use the given Strapi API or build your own API using any technology but it MUST BE publicly hosted. (Do not submit your API code if you create your own. If you do build and host your own API, the content type it serves must include at least 3 properties)<br/>
 Choosing appropriate variable and function names will form part of your assessment, as will proper and consistent formatting of your code.
 
-## Strapi application
+### Project requirements
+#### ***Home page***
+Make a GET request to fetch a list of resources from your API.<br/>
+Create HTML for each item and display at least 3 properties for each.<br/>
+Each item should also display a button or icon. Clicking on this button should toggle the item in and out of an array stored in localStorage.<br/>
+There should be a text input on this page that filters the array of results on one of the properties.
+
+#### ***Favourites page***
+This page should fetch the array of items stored in localStorage and display them or display a message that there are no items.<br/>
+There should be a “Clear all” button that clears localStorage (or just a specific key in localStorage) and reloads the display. Don’t reload the page, just redraw the HTML.
+
+### Level 2 (Optional)
+Add a login form to your frontend that will allow a logged in admin user to perform the following tasks:
+- Adding new resources to the API
+- Updating resources through an edit form
+- Deleting resources
+
+#### ***Login details:***
+Username: admin@admin.com<br/>
+Password: Pass1234
+
+## Built With
+![Strapi](https://img.shields.io/badge/-Strapi-white?style=for-the-badge&logo=Strapi&logoColor=4e26e0)
+![HTML5](https://img.shields.io/badge/-HTML5-white?style=for-the-badge&logo=html5)
+![CSS3](https://img.shields.io/badge/-CSS3-white?style=for-the-badge&logo=css3&logoColor=264de4)
+![JavaScript](https://img.shields.io/badge/-JavaScript-white?style=for-the-badge&logo=javascript)
+
+## Getting Started
+
+### Installing
+
+1. Clone the repo:
+
+```bash
+git clone git@github.com:InfiAest/strapi-js2-ca.git
+```
+
+2. Install the dependencies:
+
+```
+npm install
+```
+
+### Running
 
 To start the Strapi project:
 ```
@@ -19,52 +58,7 @@ npm install
 npm run develop
 ```
 
-Login details:
+## Contact
 
-```
-Username: admin@admin.com
-Password: Pass1234
-```
-
-There is one content type in the project, accessible at `http://localhost:1337/articles`.
-
-If you get an error about port 1337 being in use, you probably have Strapi running in another command line or terminal.
-
-Note: If you are getting an error when trying to post using the username and password above, please try the password 'Pass123' instead of 'Pass1234'.
-
-## Level 1 Process
-Build a frontend for the API and add the following:
-
-### Home page
-Make a GET request to fetch a list of resources from your API.
-
-Create HTML for each item and display at least 3 properties for each.
-
-Each item should also display a button or icon. Clicking on this button should toggle the item in and out of an array stored in localStorage.
-
-There should be a text input on this page that filters the array of results on one of the properties.
-
-
-### Favourites page
-This page should fetch the array of items stored in localStorage and display them or display a message that there are no items.
-
-There should be a “Clear all” button that clears localStorage (or just a specific key in localStorage) and reloads the display. Don’t reload the page, just redraw the HTML.
-
-
-## Level 2 Process
-Add a login form to your frontend that will allow a logged in admin user to perform the following tasks:
-- Adding new resources to the API
-- Updating resources through an edit form
-- Deleting resources
-
-### Rules
-Copying and sharing of any code will result in your assignment being given a mark of zero.
-
-You may only use plain JavaScript for this assignment, no JavaScript libraries or frameworks. You may use CSS libraries like Bootstrap.
-
-### Submission
-Create a folder called your-name-js2-ca, e.g. mary-smith-js2-ca.
-
-Add all your frontend code to this folder. Do not submit the Strapi files.
-
-Zip the folder and submit the zip file.
+[![Linkedin Badge](https://img.shields.io/badge/-CharlotteLucas-white?style=for-the-badge&logo=Linkedin&logoColor=0077b5&link=https://www.linkedin.com/in/charlotte-lucas-31544b32/)](https://www.linkedin.com/in/charlotte-lucas-31544b32/)
+[![Instagram Badge](https://img.shields.io/badge/-Infiaest-white?style=for-the-badge&logo=instagram&link=https://instagram.com/infiaest/)](https://instagram.com/infiaest)
