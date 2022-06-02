@@ -38,10 +38,11 @@ Password: Pass1234
 
 ### Installing
 
-1. Clone the repo:
+1. Clone the repo:<br/>
+(Note that you will need to replace uppercase letters when cloning in order for React to run)
 
 ```bash
-git clone git@github.com:InfiAest/strapi-js2-ca.git
+git clone git@github.com:InfiAest/JavaScript2-course-assignment.git
 ```
 
 2. Install the dependencies:
@@ -54,7 +55,6 @@ npm install
 
 To start the Strapi project:
 ```
-npm install
 npm run develop
 ```
 
